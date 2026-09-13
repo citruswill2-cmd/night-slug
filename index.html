@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NIGHT SLUG — first file, then a live address</title>
+  <meta name="description" content="Chris builds the first website for people starting a business who do not know how, and stamps other live sites onto a night slug board. Phone-first. You own the file." />
+  <meta property="og:title" content="NIGHT SLUG" />
+  <meta property="og:description" content="Start before you know how. First HTML file. Live URLs on a night board." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: "#05070B",
+            metal: "#0B1018",
+            rail: "#121821",
+            mist: "#8B93A7",
+            paper: "#E8EEF8",
+            live: "#4D8BFF",
+            heat: "#FF2B3A"
+          },
+          fontFamily: {
+            display: ["Anton", "Impact", "sans-serif"],
+            serif: ["Newsreader", "Georgia", "serif"],
+            mono: ["IBM Plex Mono", "ui-monospace", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background:
+        radial-gradient(900px 420px at 0% 0%, rgba(77,139,255,0.16), transparent 50%),
+        radial-gradient(700px 380px at 100% 8%, rgba(255,43,58,0.10), transparent 46%),
+        #05070B;
+    }
+    .reveal { opacity: 0; transform: translateY(12px); }
+    .slug-scan {
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 3px,
+        rgba(77,139,255,0.03) 3px,
+        rgba(77,139,255,0.03) 4px
+      );
+    }
+    .live-dot {
+      box-shadow: 0 0 0 0 rgba(77,139,255,0.7);
+      animation: pulse 2.4s ease-out infinite;
+    }
+    .heat-dot {
+      box-shadow: 0 0 0 0 rgba(255,43,58,0.7);
+      animation: pulse 2.4s ease-out infinite;
+    }
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 8px transparent; }
+      100% { box-shadow: 0 0 0 0 transparent; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+      .live-dot, .heat-dot { animation: none; }
+    }
+  </style>
+</head>
+<body class="font-serif text-paper antialiased">
+  <a href="#brief" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-live focus:text-void focus:px-3 focus:py-2">Skip to brief</a>
+
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-void/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <a href="#top" class="flex items-baseline gap-3">
+        <span class="font-display text-2xl tracking-wide">NIGHT SLUG</span>
+        <span class="font-mono text-[10px] uppercase tracking-[0.22em] text-heat">first file · live board</span>
+      </a>
+      <nav class="hidden gap-5 font-mono text-[11px] uppercase tracking-[0.18em] text-mist sm:flex">
+        <a href="#lanes" class="hover:text-paper">Lanes</a>
+        <a href="#board" class="hover:text-live">Board</a>
+        <a href="#brief" class="hover:text-heat">Send copy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="mx-auto max-w-6xl px-4">
+    <section class="reveal grid gap-10 py-14 sm:grid-cols-12 sm:py-20">
+      <div class="sm:col-span-7">
+        <p class="font-mono text-[11px] uppercase tracking-[0.24em] text-mist">Utah desk · phone first · you own the HTML</p>
+        <h1 class="mt-4 font-display text-5xl leading-[0.88] sm:text-7xl lg:text-8xl">
+          START BEFORE<br />YOU KNOW<br /><span class="text-live">HOW.</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-mist">
+          You decided to start a business. You do not need a course.
+          You need one file that loads in half a second, and a night board
+          that puts other live sites in front of people who already tap.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#brief" class="bg-heat px-5 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-paper hover:bg-live hover:text-void">Send the paragraph</a>
+          <a href="#board" class="border border-white/20 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.18em] hover:border-live hover:text-live">Read the slugs</a>
+        </div>
+      </div>
+      <aside class="slug-scan border border-white/10 bg-metal p-5 sm:col-span-5">
+        <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-mist">How a slug reads</p>
+        <ul class="mt-5 space-y-4 text-sm leading-relaxed">
+          <li class="flex gap-3">
+            <span class="live-dot mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-live"></span>
+            <span><span class="font-mono text-live">Live</span> — the URL works. The page is quiet. It belongs on the board.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="heat-dot mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-heat"></span>
+            <span><span class="font-mono text-heat">Heat</span> — studio is cutting the first file tonight.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-mist"></span>
+            <span><span class="font-mono text-mist">Tray</span> — GitHub exists. No public address yet.</span>
+          </li>
+        </ul>
+        <p class="mt-6 border-t border-white/10 pt-4 text-sm italic text-mist">
+          Written for modern young adults and adults who already said yes.
+          Lights off. File first.
+        </p>
+      </aside>
+    </section>
+
+    <section id="lanes" class="reveal grid gap-3 pb-4 sm:grid-cols-2">
+      <article class="border border-heat/40 bg-metal p-6">
+        <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-heat">Lane A · first file</p>
+        <h2 class="mt-2 font-display text-4xl">YOU DO NOT KNOW HOW.<br />THAT IS FINE.</h2>
+        <p class="mt-4 leading-relaxed text-mist">
+          Static HTML. Tailwind. Light motion. No login, no ads, no payments unless the brief asks.
+          The file is yours on GitHub. Drop it on Vercel. That is the start of the business, not a class about one.
+        </p>
+      </article>
+      <article class="border border-live/40 bg-rail p-6">
+        <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-live">Lane B · the board</p>
+        <h2 class="mt-2 font-display text-4xl">THEIR SITE IS UP.<br />NOBODY SEES IT.</h2>
+        <p class="mt-4 leading-relaxed text-mist">
+          We do not rebuild live sites. We stamp the address on the night board
+          where a young adult will actually tap it. Quiet pages get a slug. New pages get a first file.
+        </p>
+      </article>
+    </section>
+
+    <section id="board" class="reveal py-12">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <h2 class="font-display text-5xl">THE BOARD</h2>
+        <p class="max-w-sm font-mono text-[10px] uppercase tracking-[0.16em] text-mist sm:text-right">Tap a live stamp · tray stays gray until the URL works</p>
+      </div>
+      <ol class="mt-8 divide-y divide-white/10 border-y border-white/10">
+        <li>
+          <a class="group grid grid-cols-12 items-baseline gap-2 py-4" href="https://iris0nyx.com/" target="_blank" rel="noopener">
+            <span class="col-span-2 font-mono text-[11px] text-live sm:col-span-1">01</span>
+            <span class="col-span-10 sm:col-span-7">
+              <span class="font-display text-2xl group-hover:text-live">IRIS ONYX</span>
+              <span class="mt-1 block text-sm text-mist">Utah · independent · the softest knife. Pop with teeth. Windows down. Lights off.</span>
+            </span>
+            <span class="col-span-12 font-mono text-[11px] text-live sm:col-span-4 sm:text-right">iris0nyx.com · live</span>
+          </a>
+        </li>
+        <li>
+          <a class="group grid grid-cols-12 items-baseline gap-2 py-4" href="https://dnc-computerz.vercel.app/" target="_blank" rel="noopener">
+            <span class="col-span-2 font-mono text-[11px] text-live sm:col-span-1">02</span>
+            <span class="col-span-10 sm:col-span-7">
+              <span class="font-display text-2xl group-hover:text-live">DNC COMPUTERZ</span>
+              <span class="mt-1 block text-sm text-mist">Bench lot. Hardware on the street. Already live.</span>
+            </span>
+            <span class="col-span-12 font-mono text-[11px] text-live sm:col-span-4 sm:text-right">dnc-computerz.vercel.app · live</span>
+          </a>
+        </li>
+        <li>
+          <a class="group grid grid-cols-12 items-baseline gap-2 py-4" href="https://sameweekhq.vercel.app/" target="_blank" rel="noopener">
+            <span class="col-span-2 font-mono text-[11px] text-heat sm:col-span-1">03</span>
+            <span class="col-span-10 sm:col-span-7">
+              <span class="font-display text-2xl group-hover:text-heat">REDLINE</span>
+              <span class="mt-1 block text-sm text-mist">Studio desk. Websites however you want them. Done in no time.</span>
+            </span>
+            <span class="col-span-12 font-mono text-[11px] text-heat sm:col-span-4 sm:text-right">sameweekhq.vercel.app · heat</span>
+          </a>
+        </li>
+        <li>
+          <a class="group grid grid-cols-12 items-baseline gap-2 py-4" href="https://daytape.vercel.app/" target="_blank" rel="noopener">
+            <span class="col-span-2 font-mono text-[11px] text-live sm:col-span-1">04</span>
+            <span class="col-span-10 sm:col-span-7">
+              <span class="font-display text-2xl group-hover:text-live">DAYTAPE</span>
+              <span class="mt-1 block text-sm text-mist">Tape already rolling. Public address is live.</span>
+            </span>
+            <span class="col-span-12 font-mono text-[11px] text-live sm:col-span-4 sm:text-right">daytape.vercel.app · live</span>
+          </a>
+        </li>
+        <li>
+          <a class="group grid grid-cols-12 items-baseline gap-2 py-4" href="https://github.com/citruswill2-cmd/sameweek" target="_blank" rel="noopener">
+            <span class="col-span-2 font-mono text-[11px] text-mist sm:col-span-1">05</span>
+            <span class="col-span-10 sm:col-span-7">
+              <span class="font-display text-2xl group-hover:text-paper">SAMEWEEK</span>
+              <span class="mt-1 block text-sm text-mist">In the tray. sameweek.vercel.app currently serves CAST — needs its own live URL.</span>
+            </span>
+            <span class="col-span-12 font-mono text-[11px] text-mist sm:col-span-4 sm:text-right">github · tray</span>
+          </a>
+        </li>
+        <li>
+          <a class="group grid grid-cols-12 items-baseline gap-2 py-4" href="https://github.com/citruswill2-cmd/laughline" target="_blank" rel="noopener">
+            <span class="col-span-2 font-mono text-[11px] text-mist sm:col-span-1">06</span>
+            <span class="col-span-10 sm:col-span-7">
+              <span class="font-display text-2xl group-hover:text-paper">LAUGHLINE</span>
+              <span class="mt-1 block text-sm text-mist">Comedy first-draft. laughline.vercel.app is 404 until the project is public.</span>
+            </span>
+            <span class="col-span-12 font-mono text-[11px] text-mist sm:col-span-4 sm:text-right">github · tray</span>
+          </a>
+        </li>
+        <li>
+          <a class="group grid grid-cols-12 items-baseline gap-2 py-4" href="#brief">
+            <span class="col-span-2 font-mono text-[11px] text-heat sm:col-span-1">—</span>
+            <span class="col-span-10 sm:col-span-7">
+              <span class="font-display text-2xl group-hover:text-heat">YOUR NAME ON A SLUG</span>
+              <span class="mt-1 block text-sm text-mist">New business, or a live site that needs to stop whispering.</span>
+            </span>
+            <span class="col-span-12 font-mono text-[11px] text-heat sm:col-span-4 sm:text-right">open slug</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section id="brief" class="reveal mb-16 grid gap-8 border border-white/10 bg-metal p-6 sm:grid-cols-12 sm:p-10">
+      <div class="sm:col-span-5">
+        <p class="font-mono text-[10px] uppercase tracking-[0.22em] text-live">One field</p>
+        <h2 class="mt-2 font-display text-5xl">SEND THE PARAGRAPH.</h2>
+        <p class="mt-4 leading-relaxed text-mist">
+          Name the business or paste the live URL. Say who it is for.
+          If the URL works, it gets a slug on the board. If it does not, it gets first file.
+          Opens mail to Chris. No account.
+        </p>
+      </div>
+      <form id="slug-form" class="sm:col-span-7">
+        <label for="para" class="font-mono text-[10px] uppercase tracking-[0.2em] text-mist">The brief</label>
+        <textarea id="para" name="para" required rows="7" class="mt-2 w-full border border-white/15 bg-void p-4 text-sm text-paper placeholder:text-mist/70 focus:border-live focus:outline-none" placeholder="I just decided to start ______. It is for ______. Or here is a live site that is up and quiet: ______"></textarea>
+        <button type="submit" class="mt-4 bg-heat px-5 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-paper hover:bg-live hover:text-void">Send to Chris</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 px-4 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <p class="font-display text-xl">NIGHT SLUG</p>
+      <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-mist">Void · live #4D8BFF · heat #FF2B3A · client-owned file</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script>
+    (function () {
+      var nodes = document.querySelectorAll(".reveal");
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        nodes.forEach(function (n) { n.style.opacity = 1; n.style.transform = "none"; });
+      } else if (window.anime) {
+        anime({ targets: ".reveal", opacity: [0, 1], translateY: [12, 0], delay: anime.stagger(80), duration: 420, easing: "easeOutQuad" });
+      } else {
+        nodes.forEach(function (n) { n.style.opacity = 1; n.style.transform = "none"; });
+      }
+      var form = document.getElementById("slug-form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var text = (document.getElementById("para").value || "").trim() ||
+          "I just decided to start a business. It is for modern young adults. I need the first file.";
+        var body = "NIGHT SLUG brief\n\n" + text + "\n\n— sent from night slug";
+        window.location.href = "mailto:citruswill2@gmail.com?subject=" +
+          encodeURIComponent("NIGHT SLUG brief") + "&body=" + encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>
